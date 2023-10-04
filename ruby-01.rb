@@ -95,6 +95,18 @@ say_hello_to "John"
 say_hello_to("John")
 #=> Hello John
 
+def make_word_pretty(word)
+  "** #{word} **"
+end
+
+make_word_pretty("Hello")
+#=> "** Hello **"
+
+say_hello_to(make_word_pretty("barbora".capitalize))
+#=> Hello ** Barbora **
+
+say_hello_to(say_hello)
+#=> Hello Hello
 
 def say_hello_to_friends(name1, name2, name3)
   "Hello #{name1}, #{name2}, #{name3}"
@@ -108,6 +120,11 @@ say_hello_to_friends("John", "Paul", "George")
 
 
 "a" + "b"
+#=> "ab"
+
+w = "b"
+
+"a" + w
 #=> "ab"
 
 "a" + 1
@@ -189,3 +206,5 @@ end
 # 3
 # 4
 #  => [1, 2, 3, 4]
+
+
